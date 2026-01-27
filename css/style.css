@@ -303,6 +303,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 0.5rem;
 }
 
 .contact-link {
