@@ -256,14 +256,15 @@ a:hover {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
 .about-text {
+    flex: 1 1 300px;
     max-width: 500px;
 }
 
@@ -281,10 +282,11 @@ a:hover {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    flex: 1 1 300px;
 }
 
 .about-image img {
-    max-width: 100%;
+    max-width: 550px;
     max-height: calc(100vh - 8rem - 2in - 3rem);
     object-fit: contain;
 }
@@ -294,16 +296,14 @@ a:hover {
    ======================================== */
 
 .contact-content {
-    position: fixed;
-    bottom: 1in;
-    left: 0;
-    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 0.5rem;
+    margin-top: 14rem;
+    padding-bottom: 2rem;
 }
 
 .contact-link {
@@ -336,18 +336,20 @@ a:hover {
    Responsive Design
    ======================================== */
 
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
     .about-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .about-text {
-        max-width: 100%;
+        flex-direction: column;
     }
 
     .about-image {
-        order: -1;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 50vw;
+        max-width: none;
+        max-height: none;
     }
 }
 
